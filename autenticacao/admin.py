@@ -13,7 +13,7 @@ class PedidoInline(admin.TabularInline):
 @admin.register(Pessoa)
 class PessoaAdmin(admin.ModelAdmin):
     inlines = [PedidoInline]
-    list_display = ('nome', 'email', 'senha')
+    list_display = ('get_foto', 'nome', 'email', 'senha', 'nome_completo')
     # readonly_fields = ('senha', 'cargo')
     search_fields = ('nome', 'senha')
     list_filter = ('cargo',)
